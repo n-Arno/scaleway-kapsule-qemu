@@ -34,10 +34,5 @@ spec:
       - name: k8s-node
         hostPath:
           path: /tmp/qemu
-      tolerations:
-        - key: k8s.scaleway.com/qemu
-          operator: Equal
-          value: "enabled"
-          effect: NoSchedule
       nodeSelector:
-        k8s.scaleway.com/qemu: enabled
+        kubernetes.io/os: linux
